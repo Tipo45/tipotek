@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+    --font-primary: "Poppins", "serif";
+    --font-secondary: "Roboto", "serif";
+
+    --color-emerald-green: #10B981;
+    --color-darker-emerald-green: #0B5345;
+    --color-outline-z: #117A65;
+    --color-white-rice: #faf5ef;
+
+    --breakpoint-*: initial;
+    --breakpoint-lg: 640px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
+    --breakpoint-3xl: 1440px;
+    --breakpoint-4xl: 1536px;
+
+    
+}
