@@ -10,17 +10,20 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="mt-15 p-4">
+      <div className="mt-15 mb-30 p-4">
         <div className="p-8">
-          <div className="flex mb-1 text-lg">
+          <div className="flex mb-1 text-lg" data-aos="zoom-out"
+            data-aos-delay="500" data-aos-duration="1000">
             <h2>
               <span className="font-medium">AZEBI-ALEX, </span>Steven{" "}
             </h2>
             <FaDiamond className="mt-2 ml-5 mr-5 text-xs" /> {getCurrentYear()}{" "}
           </div>
-          <p className="text-lg py-2">Let&apos;s work together! 🤝</p>
+          <p className="text-lg py-2" data-aos="fade-right"
+            data-aos-delay="700">Let&apos;s work together! 🤝</p>
 
-          <p className="flex text-lg">
+          <p className="text-lg" data-aos="fade-right"
+            data-aos-delay="800">
             Feel free to reach out to me anytime for a conversation on{" "}
             <span className="text-green-500 ml-2 hover:underline">
               <Link to="https://wa.me/+2348135854955"  target="_blank" 
@@ -32,13 +35,15 @@ const Contact = () => {
           </p>
         </div>
         <div className="px-8 flex gap-3 text-lg">
-          <p className="text-blue-500 underline">
+          <p className="text-blue-500 underline" data-aos="fade-up"
+            data-aos-delay="500">
             <Link to="/"  target="_blank" 
   rel="noopener noreferrer" className="flex">
               <IoDocumentTextOutline className="mt-1" /> Resume
             </Link>
           </p>
-          <p>
+          <p data-aos="fade-up"
+            data-aos-delay="800">
             <Link
               to="#"
               onClick={() => (window.location = "mailto:tipo4542@gmail.com")}
@@ -46,7 +51,8 @@ const Contact = () => {
               <BiLogoGmail className="mt-1.5" />
             </Link>
           </p>
-          <p>
+          <p data-aos="fade-up"
+            data-aos-delay="1000">
             {" "}
             <Link to="https://github.com/Tipo45"  target="_blank" 
   rel="noopener noreferrer">

@@ -4,6 +4,7 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 import Tipo from "../Welcomedisplay/Tipo";
 import Contact from "../Welcomedisplay/Contact";
 import Portfolio from "../Welcomedisplay/Portfolio";
+import Footer from "../Footer/Footer";
 
 const Landingpage = () => {
   const [isAtTop, setIsAtTop] = useState(true);
@@ -40,7 +41,7 @@ const Landingpage = () => {
         <Portfolio />
         <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
       <button
         className="fixed bottom-8 right-8 p-4 bg-darker-emerald-green text-white rounded-full shadow-lg cursor-pointer hover:bg-darker-emerald-green transition-all duration-300 z-50 tablet:invisible"
         data-aos="fade-left"

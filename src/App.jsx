@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Landingpage from "./Landingpage/Landingpage";
 import { useEffect } from "react";
+import About from "./Welcomedisplay/About";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landingpage />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
