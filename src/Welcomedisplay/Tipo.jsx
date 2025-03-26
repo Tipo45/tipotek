@@ -2,7 +2,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
+import logo from "../../public/android-icon-192x192.png"
 const Tipo = () => {
   return (
     <section>
@@ -70,8 +70,8 @@ const Tipo = () => {
             </Link>
           </div>
         </div>
-        <div className="">
-          <img alt="" />
+        <div className="flex justify-center">
+          <img src={logo} alt="" className="rounded-lg w-90 invisible hidden xl:visible xl:block" />
         </div>
       </div>
     </section>

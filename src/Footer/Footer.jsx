@@ -15,7 +15,7 @@ const Footer = () => {
           data-aos-duration="2000"
         >
           <p className="text-white">
-            © 2025 Tipo Developers. All Rights Reserved.
+            © {new Date().getFullYear()} Tipotek. All Rights Reserved.
           </p>
         </div>
       </footer>
