@@ -24,7 +24,7 @@ const Header = () => {
     closeMenu();
   };
 
-  // Handle hash changes on page load
+ 
   useEffect(() => {
     const scrollToSection = (id) => {
       const section = document.getElementById(id);
@@ -48,7 +48,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("hashchange", handleHash);
     };
-  }, []); // Now no dependencies needed
+  }, []); 
 
   return (
     <section>
