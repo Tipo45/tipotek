@@ -37,10 +37,10 @@ const Contact = () => {
         <div className="px-8 flex gap-3 text-lg">
           <p className="text-blue-500 underline" data-aos="fade-up"
             data-aos-delay="500">
-            <Link to="/"  target="_blank" 
+            <a href="/documents/AZEBI.pdf"  target="_blank" 
   rel="noopener noreferrer" className="flex">
               <IoDocumentTextOutline className="mt-1" /> Resume
-            </Link>
+            </a>
           </p>
           <p data-aos="fade-up"
             data-aos-delay="800">

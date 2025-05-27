@@ -93,8 +93,7 @@ const Portfolio = () => {
           </h2>
           <p className="text-gray-300 text-md mt-4" data-aos="fade-up"
             data-aos-delay="800">
-            A React-powered brokerage platform that integrates stock and crypto
-            trading, offering real-time data and secure transactions.
+            I developed a secure EMRMS platform to streamline healthcare data management. This full-stack system enables clinics to digitize patient records with features like real-time vitals tracking (BP, pulse, temperature), appointment scheduling, and prescription management. Built with React.js and PocketBase, it offers role-based access, and responsive dashboards for both desktop and mobile use.
           </p>
           <div className="mt-8">
             <Link
