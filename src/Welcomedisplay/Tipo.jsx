@@ -32,13 +32,11 @@ const Tipo = () => {
           <div className="grid grid-cols-1 tablet:grid-cols-2 space-y-4 space-x-6 mt-5">
             <button
               onClick={() => {
-                // Create a temporary anchor tag
                 const link = document.createElement("a");
                 link.href = "/documents/AZEBI.pdf";
-                link.download = "AZEBI.pdf"; // Custom filename for download
-                document.body.appendChild(link);
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
                 link.click();
-                document.body.removeChild(link);
               }}
               className="relative cursor-pointer outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group bg-gray-100 font-medium text-black text-xl hover:bg-emerald-green hover:text-white transition-colors duration-300 ease-in-out w-50"
               data-aos="fade-right"
