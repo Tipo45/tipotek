@@ -2,7 +2,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import logo from "../../public/android-icon-192x192.png";
+import logo from "../assets/Images/android-icon-192x192.png";
 const Tipo = () => {
   return (
     <section>

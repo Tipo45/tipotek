@@ -111,7 +111,7 @@ const Header = () => {
         </nav>
 
         <div
-          className={`fixed top-15 right-0 w-full h-100 bg-emerald-200 py-6 px-8 shadow-lg
+          className={`fixed top-15 right-0 w-full h-100 bg-[#d1fae5] py-6 px-8 shadow-lg
           transform transition-all duration-500 ease-in-out tablet:hidden ${
             isOpen
               ? "translate-x-0 opacity-100 visible"
