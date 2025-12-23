@@ -122,7 +122,7 @@ const Portfolio = () => {
           </p>
           <div className="mt-8">
             <Link
-              to="https://ticketsgig.vercel.app"
+              to="https://ticket-gigs.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
             >
