@@ -133,6 +133,30 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
+        <div className="px-8 mt-15">
+          <img src={TicketsGigimg} alt="" className="rounded-md mb-4" data-aos="zoom-out"
+            data-aos-delay="300" />
+          <h2 className=" text-xl font-primary font-medium" data-aos="fade-left"
+            data-aos-delay="1000">
+           Resume Builder
+          </h2>
+          <p className="text-gray-300 text-md mt-4" data-aos="fade-up"
+            data-aos-delay="800">
+            I developed a secure 
+          </p>
+          <div className="mt-8">
+            <Link
+              to="https://resume-builder.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+            data-aos-delay="500">
+                View Project
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
