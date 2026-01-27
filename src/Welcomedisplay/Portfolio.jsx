@@ -4,11 +4,13 @@ import tipobrokerimg from "../assets/Images/Screenshot 2025-03-24 230722.png";
 import portfolioimg from "../assets/Images/Screenshot 2025-03-24 231604.png";
 import EMRMSimg from "../assets/Images/Screenshot 2025-04-15 051447.png";
 import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
+import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
+
 const Portfolio = () => {
   return (
     <section id="projects">
       <div className="flex justify-center xl:justify-normal xl:text-4xl p-8" data-aos="zoom-in"
-            data-aos-delay="1000">
+        data-aos-delay="1000">
         <h2 className="text-xl font-primary font-bold">My Projects</h2>
       </div>
       <div className="p-4 grid grid-cols-1 tablet:grid-cols-2 xl:grid-cols-3">
@@ -30,8 +32,8 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
@@ -55,8 +57,8 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
@@ -78,8 +80,8 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
@@ -102,8 +104,8 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
@@ -126,32 +128,59 @@ const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
           </div>
         </div>
         <div className="px-8 mt-15">
-          <img src={TicketsGigimg} alt="" className="rounded-md mb-4" data-aos="zoom-out"
+          <img src={ResumeBuilderimg} alt="" className="rounded-md mb-4" data-aos="zoom-out"
             data-aos-delay="300" />
           <h2 className=" text-xl font-primary font-medium" data-aos="fade-left"
             data-aos-delay="1000">
-           Resume Builder
+            Resume Builder
           </h2>
           <p className="text-gray-300 text-md mt-4" data-aos="fade-up"
             data-aos-delay="800">
-            I developed a secure 
+            A dynamic resume creation tool built with React, Tailwind CSS, and Convex. Users can craft and customize professional resumes with real-time preview, template selection, and easy export functionality.
           </p>
           <div className="mt-8">
             <Link
-              to="https://resume-builder.vercel.app"
+              to="https://resume-builder-mocha-nu.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg- hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-            data-aos-delay="500">
+              <button className="bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
+                View Project
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="px-8 mt-15 relative opacity-50">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl z-10 text-black">
+            <p>coming soon...</p>
+          </div>
+          <img src alt="ecommerce" className="rounded-md mb-4" data-aos="zoom-out"
+            data-aos-delay="300" />
+          <h2 className=" text-xl font-primary font-medium" data-aos="fade-left"
+            data-aos-delay="1000">
+            E-commerce website
+          </h2>
+          <p className="text-gray-300 text-md mt-4" data-aos="fade-up"
+            data-aos-delay="800">
+            A role-based e-commerce platform offering PWA installation. Sellers can list products, manage inventory, and track orders, while buyers browse categories, make purchases, and enjoy offline access. Built with React, Tailwind CSS, Framer Motion, and Convex.
+          </p>
+          <div className="mt-8">
+            <Link
+              to="https://tipos-ecommerce.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cursor-not-allowed disabled bg-white hover:bg-darker-emerald-green font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
+                data-aos-delay="500">
                 View Project
               </button>
             </Link>
