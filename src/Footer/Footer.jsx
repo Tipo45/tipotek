@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <section>
-      <footer className="mt-30 w-full py-16 px-5 bg-emerald-green shadow-[0px_-4px_10px_rgba(0,0,0,0.2)]">
+      <footer className="mt-30 w-full py-16 px-5 bg-tertiary shadow-[0px_-4px_10px_rgba(0,0,0,0.2)]">
 
 
 

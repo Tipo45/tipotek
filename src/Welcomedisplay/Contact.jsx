@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="px-8 flex gap-3 text-lg">
           <p className="text-blue-500 hover:text-black underline" data-aos="fade-up"
             data-aos-delay="500">
-            <a href="/documents/AZEBI.pdf" download="AZEBI_Resume.pdf"  target="_blank" 
+            <a href="/documents/AZEBI-word_091834.pdf" download="AZEBI_Resume.pdf"  target="_blank" 
   rel="noopener noreferrer" className="flex">
               <IoDocumentTextOutline className="mt-1" />Download Resume
             </a>

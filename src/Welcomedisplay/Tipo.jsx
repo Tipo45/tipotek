@@ -2,7 +2,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import logo from "../assets/Images/android-icon-192x192.png";
+import logo from "../assets/Images/WhatsApp Image 2026-05-15 at 17.14.25(1).jpg";
 const Tipo = () => {
   return (
     <section>
@@ -33,19 +33,19 @@ const Tipo = () => {
             <button
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/documents/AZEBI.pdf";
+                link.href = "/documents/AZEBI-word_091834.pdf";
                 link.target = "_blank";
                 link.rel = "noopener noreferrer";
                 link.click();
               }}
-              className="relative cursor-pointer outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group bg-gray-100 font-medium text-black text-xl hover:bg-emerald-green hover:text-white transition-colors duration-300 ease-in-out w-50"
+              className="relative cursor-pointer outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group bg-gray-100 font-medium text-black text-xl hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out w-50"
               data-aos="fade-right"
               data-aos-delay="1700"
             >
               <span className="relative z-10 flex">
                 <IoDocumentTextOutline className="mt-1 mr-1" /> View Resume
               </span>
-              <div className="absolute inset-y-0 left-[-100%] w-full bg-blue border-1 border-gray-100 transition-all duration-300 ease-in-out group-hover:left-0 z-0"></div>
+              <div className="absolute inset-y-0 -left-full w-full bg-blue border border-gray-100 transition-all duration-300 ease-in-out group-hover:left-0 z-0"></div>
             </button>
             <div className="flex space-x-4">
               <Link
@@ -54,7 +54,7 @@ const Tipo = () => {
                 rel="noopener noreferrer"
               >
                 <button
-                  className="p-4 cursor-pointer bg-gray-200 hover:bg-black group rounded-full items-center justify-center w-14 h-14"
+                  className="p-4 cursor-pointer bg-gray-200 hover:bg-green-600 group rounded-full items-center justify-center w-14 h-14"
                   data-aos="zoom-in"
                   data-aos-delay="1900"
                 >
@@ -71,7 +71,7 @@ const Tipo = () => {
                   data-aos="zoom-in"
                   data-aos-delay="2000"
                 >
-                  <BiLogoGmail className="text-black ml-1 group-hover:text-white" />
+                  <BiLogoGmail className="ml-1 group-hover:text-white" />
                 </button>
               </Link>
             </div>
@@ -81,7 +81,7 @@ const Tipo = () => {
           <img
             src={logo}
             alt=""
-            className="rounded-lg w-90 invisible hidden xl:visible xl:block"
+            className="rounded-lg w-100 invisible hidden xl:visible xl:block"
           />
         </div>
       </div>

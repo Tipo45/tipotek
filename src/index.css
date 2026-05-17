@@ -4,10 +4,10 @@
     --font-primary: "Poppins", "serif";
     --font-secondary: "Roboto", "serif";
 
-    --color-emerald-green: #10B981;
-    --color-darker-emerald-green: #0B5345;
-    --color-outline-z: #117A65;
-    --color-white-rice: #faf5ef;
+    --color-primary: #008BFF;
+    --color-secondary: #00D1FF;
+    --color-tertiary: #001F3F;
+    --color-base: #FFFFFF;
 
     --breakpoint-*: initial;
     --breakpoint-lg: 640px;

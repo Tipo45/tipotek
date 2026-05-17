@@ -43,7 +43,7 @@ const Landingpage = () => {
       </main>
       <Footer />
       <button
-        className="fixed bottom-8 right-8 p-4 bg-darker-emerald-green text-white rounded-full shadow-lg cursor-pointer hover:bg-darker-emerald-green transition-all duration-300 z-50 tablet:invisible"
+        className="fixed bottom-8 right-8 p-4 bg-tertiary text-white rounded-full shadow-lg cursor-pointer hover:bg-darker-emerald-green transition-all duration-300 z-50 tablet:invisible"
         data-aos="fade-left"
         data-aos-duration="500"
         onClick={() => scrollTo(isAtTop ? "bottom" : "top")}
