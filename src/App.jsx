@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import Landingpage from "./Landingpage/Landingpage";
 import { useEffect } from "react";
 import About from "./Welcomedisplay/About";
+import NotFound from "./Not-found";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landingpage />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

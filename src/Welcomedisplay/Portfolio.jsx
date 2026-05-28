@@ -6,6 +6,7 @@ import EMRMSimg from "../assets/Images/Screenshot 2025-04-15 051447.png";
 import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
 import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png"
+import AmpreshGroupsimg from "../assets/Images/Screenshot 2026-05-28 162550.png";
 
 const Portfolio = () => {
   
@@ -59,6 +60,13 @@ const Portfolio = () => {
         "A role-based e-commerce platform offering PWA installation. Sellers can list products, manage inventory, and track orders, while buyers browse categories, make purchases, and enjoy offline access. Built with NextJs, Tailwind CSS, Framer Motion, and Convex.",
       link: "https://crimson-cart-psi.vercel.app",
     },
+    {
+      title: "Ampresh Groups",
+      image: AmpreshGroupsimg,
+      description:
+        "A modern business website for Ampresh Groups, showcasing their services and portfolio with a responsive design.",
+      link: "https://ampresh-groups.vercel.app",
+    }
   ];
 
   return (
