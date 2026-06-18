@@ -6,7 +6,7 @@ import EMRMSimg from "../assets/Images/Screenshot 2025-04-15 051447.png";
 import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
 import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png"
-import AmpreshGroupsimg from "../assets/Images/Screenshot 2026-05-28 162550.png";
+import AmpreshGroupsimg from "../assets/Images/Screenshot 2026-05-28 190207.png";
 
 const Portfolio = () => {
   

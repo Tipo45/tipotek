@@ -10,20 +10,36 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800, 
-      once: true, 
+      duration: 800,
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="min-h-screen w-full bg-white relative">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        linear-gradient(to right, #d1d5db 1px, transparent 1px),
+        linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+      `,
+          backgroundSize: "32px 32px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
+        }}
+      />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
