@@ -7,6 +7,7 @@ import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
 import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png"
 import AmpreshGroupsimg from "../assets/Images/Screenshot 2026-05-28 190207.png";
+import ICETIAimg from "../assets/Images/Screenshot 2026-07-12 203248.png"
 
 const Portfolio = () => {
   
@@ -58,7 +59,7 @@ const Portfolio = () => {
       image: CrimsonCartimg,
       description:
         "A role-based e-commerce platform offering PWA installation. Sellers can list products, manage inventory, and track orders, while buyers browse categories, make purchases, and enjoy offline access. Built with NextJs, Tailwind CSS, Framer Motion, and Convex.",
-      link: "https://crimson-cart-psi.vercel.app",
+      link: "https://crimson-cart-umber.vercel.app",
     },
     {
       title: "Ampresh Groups",
@@ -66,6 +67,13 @@ const Portfolio = () => {
       description:
         "A modern business website for Ampresh Groups, showcasing their services and portfolio with a responsive design.",
       link: "https://ampresh-groups.vercel.app",
+    },
+    {
+      title: "ICETIA 2026",
+      image: ICETIAimg,
+      description:
+        "ICETIA 2026 is a modern web application designed to streamline the registration and administration of the International Conference on Emerging Technologies, Innovation, and Applications (ICETIA 2026). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
+      link: "https://icetia.vercel.app",
     }
   ];
 

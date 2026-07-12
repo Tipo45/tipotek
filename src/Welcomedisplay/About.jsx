@@ -131,7 +131,7 @@ const About = () => {
                   </h4>
 
                   <p className="text-sm text-gray-600">
-                    HTML/CSS, JavaScript, React
+                    HTML/CSS, JavaScript, React.js, Next.js, Pocketbase, Convex
                   </p>
                 </div>
 

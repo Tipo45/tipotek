@@ -26,7 +26,7 @@ const Tipo = () => {
               data-aos-delay="1700"
             >
               A Nigerian-based Web Developer passionate about developing
-              functional, intuitive websites for seamless user experiences.
+              functional, intuitive web applications for seamless user experiences.
             </h1>
           </div>
           <div className="grid grid-cols-1 tablet:grid-cols-2 space-y-4 space-x-6 mt-5">
