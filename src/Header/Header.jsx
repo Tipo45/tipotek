@@ -1,190 +1,135 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { RiMenu2Line } from "react-icons/ri";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+const navItems = [
+  { label: "About", path: "/about" },
+  { label: "Projects", section: "projects" },
+  { label: "Contact", section: "contact" },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const closeMenu = () => setIsOpen(false);
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState(null, "", `#${id}`);
-    }
+  const goToSection = (sectionId) => {
     closeMenu();
+
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+      return;
+    }
+
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.pushState(null, "", `#${sectionId}`);
   };
 
- 
+  // Scroll to a section after navigating to /#projects or /#contact.
   useEffect(() => {
-    const scrollToSection = (id) => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-        window.history.pushState(null, "", `#${id}`);
-      }
-      closeMenu();
+    if (location.pathname !== "/" || !location.hash) return;
+
+    const sectionId = location.hash.slice(1);
+
+    requestAnimationFrame(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [location.pathname, location.hash]);
+
+  // Close with Escape and prevent background scrolling on mobile.
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") closeMenu();
     };
-  
-    const handleHash = () => {
-      const hash = window.location.hash.substring(1);
-      if (hash && (hash === "projects" || hash === "contact")) {
-        scrollToSection(hash);
-      }
-    };
-  
-    handleHash();
-    window.addEventListener("hashchange", handleHash);
-  
+
+    document.addEventListener("keydown", handleEscape);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
     return () => {
-      window.removeEventListener("hashchange", handleHash);
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
     };
-  }, []); 
+  }, [isOpen]);
+
+  const renderNavLink = (item, mobile = false) => {
+    const baseClass = mobile
+  ? "block w-full rounded-xl px-5 py-4 text-center text-lg font-semibold text-slate-900 transition-colors hover:bg-primary hover:text-white"
+      : "rounded-lg px-3 py-2 text-sm font-semibold text-slate-300 transition-colors hover:text-white lg:text-base";
+
+    if (item.section) {
+      return (
+        <button
+          type="button"
+          onClick={() => goToSection(item.section)}
+          className={`${baseClass} cursor-pointer`}
+        >
+          {item.label}
+        </button>
+      );
+    }
+
+    return (
+      <Link to={item.path} onClick={closeMenu} className={baseClass}>
+        {item.label}
+      </Link>
+    );
+  };
 
   return (
-    <section>
-      <header className="fixed top-0 left-0 w-full h-15 bg-tertiary shadow-md z-50 mb-60 px-4 tablet:max-xl:px-5 xl:px-30">
-        <nav className="px-5 py-3 flex justify-between items-center">
-          <Link to="/" className="text-white">
-            <h3
-              className="text-3xl font-extrabold font-primary"
-              data-aos="zoom-in"
-              data-aos-delay="1000"
-            >
-              Tipotek
-            </h3>
-          </Link>
-
-          <div className="hidden tablet:flex items-center">
-            <ul className="flex justify-around gap-8 text-xl text-white font-extrabold font-primary">
-              <li data-aos="zoom-in" data-aos-delay="1500">
-                <Link to="/about">
-                  <h4 className="hover:bg-base hover:text-tertiary rounded-lg px-6">
-                    About
-                  </h4>
-                </Link>
-              </li>
-              <li data-aos="zoom-in" data-aos-delay="1500">
-                <Link
-                  to="/#projects"
-                  onClick={(e) => {
-                    if (location.pathname === "/") {
-                      e.preventDefault();
-                      scrollToSection("projects");
-                    }}}
-                >
-                  <h4 className="hover:bg-base hover:text-tertiary rounded-lg px-2">
-                    Projects
-                  </h4>
-                </Link>
-              </li>
-              <li data-aos="zoom-in" data-aos-delay="1500">
-                <Link
-                  to="/#contact"
-                  onClick={(e) => {
-                    if (location.pathname === "/") {
-                      e.preventDefault();
-                      scrollToSection("contact");
-                    }}}
-                >
-                  <h4 className="hover:bg-base hover:text-tertiary rounded-lg px-2">
-                    Contact
-                  </h4>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <button
-            onClick={toggleMenu}
-            className="text-2xl cursor-pointer text-white font-bold focus:outline-none tablet:hidden transition-transform duration-300 ease-in-out"
-            data-aos="zoom-in"
-            data-aos-delay="1000"
-          >
-            {isOpen ? <FaTimes /> : <RiMenu2Line />}
-          </button>
-        </nav>
-
-        <div
-          className={`fixed top-15 right-0 w-full h-full bg-tertiary py-6 px-8 shadow-lg
-          transform transition-all duration-500 ease-in-out tablet:hidden ${
-            isOpen
-              ? "translate-y-0 opacity-100 visible"
-              : "-translate-y-full opacity-0 invisible"
-          }`}
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950 backdrop-blur-lg">
+      <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8 tablet:px-10 xl:px-12 2xl:px-0">
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="font-primary text-2xl font-extrabold tracking-tight text-white transition-colors hover:text-primary lg:text-3xl"
+          aria-label="Tipotek home page"
         >
-          <div className="mt-2 text-xl flex justify-center">
-            <ul className="space-y-15 text-2xl text-base font-bold font-primary px-60">
-              <li
-                className={`transition-all duration-500 ease-in-out transform ${
-                  isOpen ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                }`}
-                style={{ transitionDelay: isOpen ? "0.5s" : "0s" }}
-              >
-                <Link to="/about" onClick={closeMenu}>
-                  <h4 className="hover:bg-white hover:text-tertiary rounded-lg p-4 text-center">
-                    About
-                  </h4>
-                </Link>
-              </li>
-              <li
-                className={`transition-all duration-500 ease-in-out transform ${
-                  isOpen ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                }`}
-                style={{ transitionDelay: isOpen ? "0.7s" : "0s" }}
-              >
-                <Link
-                  to="/#projects"
-                  onClick={(e) => {
-                    if (location.pathname === "/") {
-                      e.preventDefault();
-                      scrollToSection("projects");
-                    } else {
-                      closeMenu();
-                    }
-                  }}
-                >
-                  <h4 className="hover:bg-white hover:text-tertiary rounded-lg p-4 text-center">
-                    Projects
-                  </h4>
-                </Link>
-              </li>
-              <li
-                className={`transition-all duration-500 ease-in-out transform ${
-                  isOpen ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                }`}
-                style={{ transitionDelay: isOpen ? "0.9s" : "0s" }}
-              >
-                <Link
-                  to="/#contact"
-                  onClick={(e) => {
-                    if (location.pathname === "/") {
-                      e.preventDefault();
-                      scrollToSection("contact");
-                    } else {
-                      closeMenu();
-                    }
-                  }}
-                >
-                  <h4 className="hover:bg-white hover:text-tertiary rounded-lg p-4 text-center">
-                    Contact
-                  </h4>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
-    </section>
+          Tipotek<span className="text-primary">.</span>
+        </Link>
+
+        <ul className="hidden items-center gap-2 tablet:flex">
+          {navItems.map((item) => (
+            <li key={item.label}>{renderNavLink(item)}</li>
+          ))}
+        </ul>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          className="grid h-11 w-11 place-items-center rounded-xl text-2xl text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary tablet:hidden"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <FaTimes /> : <RiMenu2Line />}
+        </button>
+      </nav>
+
+      <div
+        className={`absolute inset-x-0 top-18 border-b border-white/10 bg-white px-5 py-6 shadow-xl transition-all duration-300 tablet:hidden ${
+          isOpen
+            ? "visible translate-y-0 opacity-100"
+            : "pointer-events-none invisible -translate-y-3 opacity-0"
+        }`}
+      >
+        <ul className="mx-auto space-y-2">
+          {navItems.map((item) => (
+            <li key={item.label} className="w-full">
+              {renderNavLink(item, true)}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
   );
 };
 

@@ -1,88 +1,87 @@
 import { BiLogoGmail } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import logo from "../assets/Images/WhatsApp Image 2026-05-15 at 17.14.25(1).jpg";
+
 const Tipo = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 gap-2 tablet:grid-cols-2 mt-15 p-4">
-        <div className="p-8">
-          <div className="mb-8">
-            <p
-              className="flex text-lg text-gray-500"
-              data-aos="fade-right"
-              data-aos-delay="1600"
-            >
-              Hi, I&apos;m Tipo{" "}
-              <span role="img" aria-label="wave">
-                {" "}
-                👋{" "}
-              </span>
-            </p>
-            <h1
-              className="text-2xl/10 font-medium font-primary"
-              data-aos="fade-up"
-              data-aos-delay="1700"
-            >
-              A Nigerian-based Web Developer passionate about developing
-              functional, intuitive web applications for seamless user experiences.
-            </h1>
-          </div>
-          <div className="grid grid-cols-1 tablet:grid-cols-2 space-y-4 space-x-6 mt-5">
-            <button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/documents/AZEBI-word_091834.pdf";
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                link.click();
-              }}
-              className="relative cursor-pointer outline-none p-4 rounded-2xl border-2 border-transparent overflow-hidden group bg-gray-100 font-medium text-black text-xl hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out w-50"
-              data-aos="fade-right"
-              data-aos-delay="1700"
-            >
-              <span className="relative z-10 flex">
-                <IoDocumentTextOutline className="mt-1 mr-1" /> View Resume
-              </span>
-              <div className="absolute inset-y-0 -left-full w-full bg-blue border border-gray-100 transition-all duration-300 ease-in-out group-hover:left-0 z-0"></div>
-            </button>
-            <div className="flex space-x-4">
-              <Link
-                to="https://wa.me/+2348135854955"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  className="p-4 cursor-pointer bg-gray-200 hover:bg-green-600 group rounded-full items-center justify-center w-14 h-14"
-                  data-aos="zoom-in"
-                  data-aos-delay="1900"
-                >
-                  <FaWhatsapp className="text-green-500 ml-1 group-hover:text-white" />
-                </button>
-              </Link>
+    <section className="overflow-hidden px-5 py-16 lg:px-8 tablet:py-20 xl:px-12 2xl:px-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 tablet:grid-cols-2 xl:gap-16">
+        <div className="order-2 tablet:order-1">
+          <p
+            className="flex items-center gap-2 font-medium text-primary lg:text-lg"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            Hi, I&apos;m Tipo <span aria-label="wave" role="img">👋</span>
+          </p>
 
-              <Link
-                to="#"
-                onClick={() => (window.location = "mailto:tipo4542@gmail.com")}
-              >
-                <button
-                  className="p-4 cursor-pointer bg-gray-200 hover:bg-black group rounded-full items-center justify-center w-14 h-14"
-                  data-aos="zoom-in"
-                  data-aos-delay="2000"
-                >
-                  <BiLogoGmail className="ml-1 group-hover:text-white" />
-                </button>
-              </Link>
-            </div>
+          <h1
+            className="mt-4 font-primary text-3xl font-bold leading-tight text-slate-900 lg:text-4xl xl:text-5xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            Full-stack developer building functional, intuitive web experiences.
+          </h1>
+
+          <p
+            className="mt-5 max-w-xl text-base leading-7 lg:text-lg"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            I&apos;m a Nigerian-based developer focused on creating fast,
+            accessible, and thoughtful applications that solve real problems and
+            feel great to use.
+          </p>
+
+          <div
+            className="mt-8 flex flex-wrap items-center gap-4"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <a
+              href="/documents/AZEBI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            >
+              <IoDocumentTextOutline className="text-xl" />
+              View Resume
+            </a>
+
+            <a
+              href="https://wa.me/2348135854955"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with Tipo on WhatsApp"
+              className="grid h-12 w-12 place-items-center rounded-full bg-green-50 text-xl text-green-600 transition-all duration-300 hover:-translate-y-1 hover:bg-green-600 hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+            >
+              <FaWhatsapp />
+            </a>
+
+            <a
+              href="mailto:tipo4542@gmail.com"
+              aria-label="Send Tipo an email"
+              className="grid h-12 w-12 place-items-center rounded-full bg-slate-100 text-xl text-slate-800 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900 hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+            >
+              <BiLogoGmail />
+            </a>
           </div>
         </div>
-        <div className="flex justify-center">
-          <img
-            src={logo}
-            alt=""
-            className="rounded-lg w-100 invisible hidden xl:visible xl:block"
-          />
+
+        <div
+          className="order-1 mx-auto w-full max-w-sm tablet:order-2 tablet:max-w-md xl:max-w-lg"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-4xl bg-primary/15 blur-2xl" />
+            <img
+              src={logo}
+              alt="Tipo Azebi"
+              className="relative aspect-square w-full rounded-3xl object-cover shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>

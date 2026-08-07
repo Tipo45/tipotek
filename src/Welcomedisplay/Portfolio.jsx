@@ -5,12 +5,12 @@ import portfolioimg from "../assets/Images/Screenshot 2026-05-16 211653.png";
 import EMRMSimg from "../assets/Images/Screenshot 2025-04-15 051447.png";
 import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
-import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png"
-import AmpreshGroupsimg from "../assets/Images/Screenshot 2026-05-28 190207.png";
-import ICETIAimg from "../assets/Images/Screenshot 2026-07-12 203248.png"
+import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png";
+import CASCADEimg from "../assets/Images/Screenshot 2026-08-07 023141.png";
+import { MdArrowOutward } from "react-icons/md";
 
 const Portfolio = () => {
-  
+
   const projects = [
     {
       title: "Service Konnect",
@@ -20,18 +20,25 @@ const Portfolio = () => {
       link: "https://service-konnect.vercel.app",
     },
     {
-      title: "Tipo's Broker",
-      image: tipobrokerimg,
-      description:
-        "A React-powered brokerage platform integrating stock and crypto trading with real-time market data and secure transactions.",
-      link: "https://tipos-broker.vercel.app",
-    },
-    {
       title: "My Portfolio",
       image: portfolioimg,
       description:
         "A stylish and high-performance portfolio built with React.js and Tailwind CSS, showcasing clean code and modern UI design.",
       link: "https://tipotek.vercel.app",
+    },
+    {
+      title: "Tipo's Broker",
+      image: tipobrokerimg,
+      description:
+        "A React-powered brokerage platform built with React.js and Tailwind CSS demonstrating responsive UI design.",
+      link: "https://tipos-broker.vercel.app",
+    },
+    {
+      title: "Resume Builder",
+      image: ResumeBuilderimg,
+      description:
+        "A dynamic resume creation tool built with React and Tailwind CSS.",
+      link: "https://resume-builder-mocha-nu.vercel.app",
     },
     {
       title: "Electronic Medical Records Management System",
@@ -44,15 +51,8 @@ const Portfolio = () => {
       title: "Event Tickets Management System",
       image: TicketsGigimg,
       description:
-        "A secure event ticketing platform where users can browse events, purchase tickets, and manage bookings with real-time availability tracking.",
+        "A secure event ticketing platform where users can browse events, purchase tickets, and manage bookings with real-time availability tracking built with React.js and Pocketbase.",
       link: "https://ticket-gigs.vercel.app",
-    },
-    {
-      title: "Resume Builder",
-      image: ResumeBuilderimg,
-      description:
-        "A dynamic resume creation tool built with React, Tailwind CSS, and Convex featuring real-time previews, templates, and export functionality.",
-      link: "https://resume-builder-mocha-nu.vercel.app",
     },
     {
       title: "Crimson Cart",
@@ -62,57 +62,77 @@ const Portfolio = () => {
       link: "https://crimson-cart-umber.vercel.app",
     },
     {
-      title: "Ampresh Groups",
-      image: AmpreshGroupsimg,
+      title: "CASCADE 2026",
+      image: CASCADEimg,
       description:
-        "A modern business website for Ampresh Groups, showcasing their services and portfolio with a responsive design.",
-      link: "https://ampresh-groups.vercel.app",
-    },
-    {
-      title: "ICETIA 2026",
-      image: ICETIAimg,
-      description:
-        "ICETIA 2026 is a modern web application designed to streamline the registration and administration of the International Conference on Emerging Technologies, Innovation, and Applications (ICETIA 2026). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
-      link: "https://icetia.vercel.app",
+        "CASCADE 2026 is a modern web application designed to streamline the registration and administration of the International Conference on Cybersecurity, Artificial Intelligence, Smart Systems, Computing, Analytics, Data and Emerging Technologies (CASCADE 2026). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
+      link: "https://cascade-nine-delta.vercel.app",
     }
   ];
 
   return (
-    <section id="projects">
-      <div className="flex justify-center xl:justify-normal xl:text-4xl p-8" data-aos="zoom-in"
-        data-aos-delay="1000">
-        <h2 className="text-xl font-primary font-bold">My Projects</h2>
+     <section
+      id="projects"
+      className="bg-slate-50 px-5 py-16 lg:px-8 tablet:py-20 xl:px-12 2xl:px-20 scroll-mt-24"
+    >
+      <div
+        className="mx-auto mb-10 max-w-3xl text-center tablet:mb-14"
+        data-aos="zoom-in"
+      >
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          Selected work
+        </p>
+        <h2 className="font-primary text-3xl font-bold text-slate-900 lg:text-4xl xl:text-5xl">
+          Projects I've Built
+        </h2>
+        <p className="mt-4 leading-7 lg:text-lg">
+          A selection of practical, user-focused web applications built with
+          modern technologies.
+        </p>
       </div>
-      <div className="p-4 grid grid-cols-1 tablet:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project, index) => ( <div key={index} className="px-8 mt-15">
-          <img src={project.image} alt={project.title} className="rounded-md mb-4" data-aos="zoom-out"
-            data-aos-delay="300" />
-          <h2 className=" text-xl font-primary font-medium" data-aos="fade-left"
-            data-aos-delay="1000">
-            {project.title}
-          </h2>
-          <p className="text-gray-600 text-md mt-4" data-aos="fade-up"
-            data-aos-delay="800">
-            {project.description}
-          </p>
-          <div className="mt-8">
-            <Link
-              to={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="bg-white hover:bg-primary font-medium outline-2 hover:outline-outline-z text-lg text-black hover:text-white p-4 rounded-2xl transition-all duration-300 hover:-translate-y-3 focus:outline-white" data-aos="fade-up"
-                data-aos-delay="500">
+
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-7 tablet:grid-cols-2 tablet:gap-8 xl:grid-cols-3 xl:gap-10">
+        {projects.map((project) => (
+          <article
+            key={project.title}
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:shadow-xl"
+            data-aos="fade-up"
+          >
+            <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
+              <img
+                src={project.image}
+                alt={`${project.title} project preview`}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </div>
+
+            <div className="flex flex-1 flex-col p-6">
+              <h3 className="font-primary text-xl font-semibold text-slate-900 lg:text-2xl">
+                {project.title}
+              </h3>
+
+              <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">
+                {project.description}
+              </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label={`View ${project.title}`}
+              >
                 View Project
-              </button>
-            </Link>
-          </div>
-        </div>))}
-        
+                <MdArrowOutward />
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 };
 
 export default Portfolio;
- 
