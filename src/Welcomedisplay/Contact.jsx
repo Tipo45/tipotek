@@ -46,7 +46,7 @@ const Contact = () => {
             data-aos-delay="350"
           >
             <a
-              href="wa.link/bi3zkr"
+              href="https://wa.link/bi3zkr"
               // href="https://wa.me/2348135854955?text=Hello%20Steven,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
