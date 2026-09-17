@@ -7,7 +7,7 @@ const Tipo = () => {
   return (
     <section className="overflow-hidden px-5 py-16 lg:px-8 tablet:py-20 xl:px-12 2xl:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-10 tablet:grid-cols-2 xl:gap-16">
-        <div className="order-2 tablet:order-1">
+        <div className="order-2 tablet:order-1 mt-10 tablet:mt-0">
           <p
             className="flex items-center gap-2 font-medium text-primary lg:text-lg"
             data-aos="fade-right"
@@ -25,7 +25,7 @@ const Tipo = () => {
           </h1>
 
           <p
-            className="mt-5 max-w-xl text-base leading-7 lg:text-lg"
+            className="mt-5 max-w-xl text-gray-700 leading-7 lg:text-lg"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -40,7 +40,7 @@ const Tipo = () => {
             data-aos-delay="500"
           >
             <a
-              href="/documents/AZEBI.pdf"
+              href="/documents/AZEBITCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3.5 text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -70,7 +70,7 @@ const Tipo = () => {
         </div>
 
         <div
-          className="order-1 mx-auto w-full max-w-sm tablet:order-2 tablet:max-w-md xl:max-w-lg"
+          className="hidden tablet:flex mx-auto w-full max-w-sm order-2 tablet:max-w-md xl:max-w-lg"
           data-aos="fade-left"
           data-aos-delay="300"
         >

@@ -7,6 +7,7 @@ import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
 import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png";
 import CASCADEimg from "../assets/Images/Screenshot 2026-08-07 023141.png";
+import Ajsimg from "../assets/Images/Screenshot 2026-09-11 141306.png";
 import { MdArrowOutward } from "react-icons/md";
 
 const Portfolio = () => {
@@ -67,11 +68,16 @@ const Portfolio = () => {
       description:
         "CASCADE 2026 is a modern web application designed to streamline the registration and administration of the International Conference on Cybersecurity, Artificial Intelligence, Smart Systems, Computing, Analytics, Data and Emerging Technologies (CASCADE 2026). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
       link: "https://cascade-nine-delta.vercel.app",
-    }
+    },
+    {
+      title: "Aj's Portfolio",
+      image: Ajsimg,
+      description: "A sleek and modern portfolio website built with React.js and Tailwind CSS, showcasing clean code, responsive design, and a user-friendly interface.",
+      link: "https://aj-s-portfolio.vercel.app",}
   ];
 
   return (
-     <section
+    <section
       id="projects"
       className="bg-slate-50 px-5 py-16 lg:px-8 tablet:py-20 xl:px-12 2xl:px-20 scroll-mt-24"
     >

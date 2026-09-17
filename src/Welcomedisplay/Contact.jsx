@@ -56,7 +56,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="/documents/AZEBI.pdf"
+              href="/documents/AZEBITCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download="AZEBI_Resume.pdf"
