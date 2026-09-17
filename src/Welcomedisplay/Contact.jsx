@@ -46,7 +46,8 @@ const Contact = () => {
             data-aos-delay="350"
           >
             <a
-              href="https://wa.me/2348135854955"
+              href="wa.link/bi3zkr"
+              // href="https://wa.me/2348135854955?text=Hello%20Steven,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-950"
