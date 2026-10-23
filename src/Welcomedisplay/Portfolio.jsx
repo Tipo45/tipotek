@@ -63,11 +63,11 @@ const Portfolio = () => {
       link: "https://crimson-cart-umber.vercel.app",
     },
     {
-      title: "CASCADE 2026",
+      title: "ICETIA 2027",
       image: CASCADEimg,
       description:
-        "CASCADE 2026 is a modern web application designed to streamline the registration and administration of the International Conference on Cybersecurity, Artificial Intelligence, Smart Systems, Computing, Analytics, Data and Emerging Technologies (CASCADE 2026). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
-      link: "https://cascade-nine-delta.vercel.app",
+        "ICETIA 2027 is a modern web application designed to streamline the registration and administration of the International Conference on Emerging Technologies, Innovation and Applications (ICETIA 2027). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
+      link: "https://icetiaconference.org",
     },
     {
       title: "Aj's Portfolio",
