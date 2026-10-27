@@ -6,7 +6,7 @@ import EMRMSimg from "../assets/Images/Screenshot 2025-04-15 051447.png";
 import TicketsGigimg from "../assets/Images/Screenshot 2025-11-18 214030.png";
 import ResumeBuilderimg from "../assets/Images/Screenshot 2026-01-27 200416.png";
 import CrimsonCartimg from "../assets/Images/Screenshot 2026-05-16 203020.png";
-import CASCADEimg from "../assets/Images/Screenshot 2026-08-07 023141.png";
+import ICETIAimg from "../assets/Images/Screenshot 2026-10-27 100610.png";
 import Ajsimg from "../assets/Images/Screenshot 2026-09-11 141306.png";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -14,32 +14,18 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "My Portfolio",
+      image: portfolioimg,
+      description:
+        "A stylish and high-performance portfolio built with React.js and Tailwind CSS, showcasing clean code and modern UI design.",
+      link: "https://tinyurl.com/3jvn89t5",
+    },
+    {
       title: "Service Konnect",
       image: servicekimg,
       description:
         "A Progressive Web App (PWA) connecting skilled artisans with clients, offering effortless booking, and secure transactions. Developed with React and Pocketbase, it features offline-first capabilities for reliable access in low-connectivity environments.",
       link: "https://service-konnect.vercel.app",
-    },
-    {
-      title: "My Portfolio",
-      image: portfolioimg,
-      description:
-        "A stylish and high-performance portfolio built with React.js and Tailwind CSS, showcasing clean code and modern UI design.",
-      link: "https://tipotek.vercel.app",
-    },
-    {
-      title: "Tipo's Broker",
-      image: tipobrokerimg,
-      description:
-        "A React-powered brokerage platform built with React.js and Tailwind CSS demonstrating responsive UI design.",
-      link: "https://tipos-broker.vercel.app",
-    },
-    {
-      title: "Resume Builder",
-      image: ResumeBuilderimg,
-      description:
-        "A dynamic resume creation tool built with React and Tailwind CSS.",
-      link: "https://resume-builder-mocha-nu.vercel.app",
     },
     {
       title: "Electronic Medical Records Management System",
@@ -64,10 +50,24 @@ const Portfolio = () => {
     },
     {
       title: "ICETIA 2027",
-      image: CASCADEimg,
+      image: ICETIAimg,
       description:
         "ICETIA 2027 is a modern web application designed to streamline the registration and administration of the International Conference on Emerging Technologies, Innovation and Applications (ICETIA 2027). The platform enables authors, participants, and students to register, submit research papers, manage co-authors, upload conference documents, make payments, and receive automated confirmation emails. It also provides an administrative dashboard for managing registrations, tracking payments, viewing submitted papers, and communicating with attendees, all through a secure and user-friendly interface.",
       link: "https://icetiaconference.org",
+    },
+    {
+      title: "Tipo's Broker",
+      image: tipobrokerimg,
+      description:
+        "A React-powered brokerage platform built with React.js and Tailwind CSS demonstrating responsive UI design.",
+      link: "https://tipos-broker.vercel.app",
+    },
+    {
+      title: "Resume Builder",
+      image: ResumeBuilderimg,
+      description:
+        "A dynamic resume creation tool built with React and Tailwind CSS.",
+      link: "https://resume-builder-mocha-nu.vercel.app",
     },
     {
       title: "Aj's Portfolio",

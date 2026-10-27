@@ -63,8 +63,8 @@ const Header = () => {
 
   const renderNavLink = (item, mobile = false) => {
     const baseClass = mobile
-  ? "block w-full rounded-xl px-5 py-4 text-center text-lg font-semibold text-slate-900 transition-colors hover:bg-primary hover:text-white"
-      : "rounded-lg px-3 py-2 text-sm font-semibold text-slate-300 transition-colors hover:text-white lg:text-base";
+      ? "block w-full rounded-xl px-5 py-4 text-center text-lg font-semibold text-slate-900 transition-colors hover:bg-primary hover:text-white"
+      : "rounded-lg px-3 py-2 text-sm font-semibold text-slate-300 transition-colors hover:text-primary lg:text-base";
 
     if (item.section) {
       return (
@@ -99,7 +99,9 @@ const Header = () => {
 
         <ul className="hidden items-center gap-2 tablet:flex">
           {navItems.map((item) => (
-            <li key={item.label}>{renderNavLink(item)}</li>
+            <li key={item.label} className="group">
+              {renderNavLink(item)}
+            </li>
           ))}
         </ul>
 
@@ -115,11 +117,10 @@ const Header = () => {
       </nav>
 
       <div
-        className={`absolute inset-x-0 top-18 border-b border-white/10 bg-white px-5 py-6 shadow-xl transition-all duration-300 tablet:hidden ${
-          isOpen
+        className={`absolute inset-x-0 top-18 border-b border-white/10 bg-white px-5 py-6 shadow-xl transition-all duration-300 tablet:hidden ${isOpen
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-3 opacity-0"
-        }`}
+          }`}
       >
         <ul className="mx-auto space-y-2">
           {navItems.map((item) => (
